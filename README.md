@@ -2,6 +2,10 @@
 
 <p>Breeze is a web-based chat application that enables real-time messaging between users.</p>
 
+<div style="background-color: #ffe6e6; border: 1px solid #ff8080; padding: 10px; margin: 10px 0;">
+  <strong>Note:</strong> This is a demonstration project and is not suitable for production use. It is intended for learning and experimentation purposes only.
+</div>
+
 <h2>Current Features</h2>
 <ul>
   <li>Real-time messaging between two users</li>
