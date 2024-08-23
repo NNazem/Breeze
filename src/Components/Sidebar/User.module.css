@@ -1,0 +1,120 @@
+.userListContainer {
+  position: relative;
+  height: 100vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.userList {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 10px;
+  padding-bottom: 55px; /* Spazio per il pulsante di logout */
+}
+
+.userList::-webkit-scrollbar {
+  display: none;
+}
+
+.user,
+.userActive {
+  display: flex;
+  align-items: center;
+  width: 89%;
+
+  margin: 0 auto 10px auto; /* Centra l'elemento e aggiunge spazio sotto */
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.user {
+  background: #ffffff;
+}
+
+.userActive {
+  background: #0470db;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  min-width: 55px;
+  object-fit: cover;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+  transform-origin: center center;
+}
+
+.contentWrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  color: black;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 0 0;
+}
+
+.lastSeen,
+.message {
+  color: #ffffff;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.lastSeen {
+  margin: 0 0 0vh 0;
+}
+
+.user .lastSeen {
+  color: black;
+}
+
+.user .message {
+  color: black;
+}
+
+.menuButton {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 45px;
+  background-color: #ac18ab;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid #ac18ab;
+  border-radius: 10px;
+}
+
+.menuButton:hover {
+  background-color: #ffffff;
+  color: #db04db;
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,79 @@
+.sidebar {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  background: #ffffff;
+  border-right: 1px solid #dddddd;
+  max-width: 300px;
+  width: 900%;
+  height: 100vh; /* Assicura che la sidebar occupi l'intera altezza del genitore */
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center; /* Centra orizzontalmente il contenuto */
+  align-self: center;
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  width: 90%; /* Occupa l'intera larghezza della sidebar */
+}
+
+.menuButton {
+  height: 45px;
+  background-color: #ac18ab;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid #ac18ab;
+  border-radius: 10px;
+  margin-top: auto; /* Spinge il bottone in basso */
+}
+
+.menuButton:hover {
+  background-color: #ffffff;
+  color: #db04db;
+  transition: all 0.3s ease;
+}
+
+.search {
+  width: 80%; /* Usa il 90% della larghezza del container */
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+  height: 38px;
+  padding: 0 10px 0 35px; /* Aggiusta il padding */
+  font-size: 14px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 8%; /* Adjusted left position to account for container padding */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  pointer-events: none;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+/* Optional: style for the placeholder */
+.search::placeholder {
+  color: #5a5a5a;
+  font-size: 13px;
+  font-weight: 0;
+  font-family: Inter, sans-serif;
+  padding-left: 0px;
+}
+
+.search:focus {
+  border-color: #1959ab;
+}
+
+/* Optional: style for the search icon, if present */

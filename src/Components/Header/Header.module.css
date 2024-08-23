@@ -1,0 +1,83 @@
+.header {
+  background: #ffffff;
+  width: calc(100%);
+  margin: 0px 10px 15px 15px;
+  margin-left: 0px;
+  box-sizing: border-box;
+  display: flex; /* Add this */
+  align-items: center; /* Add this */
+  border-bottom: 1px solid #dddddd;
+}
+.elements {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 10px;
+  min-height: 38px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 13px;
+  gap: 30px;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: #0470db;
+  transition: all 0.3s ease;
+}
+
+.name {
+  color: var(--text-black, #4e4e4e);
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.lastSeen {
+  color: var(--text-black, #4e4e4e);
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  flex-shrink: 0;
+  margin: 0;
+  margin-left: 1px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+  align-self: center;
+  margin-left: 25px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2); /* Applica uno zoom del 150% */
+  transform-origin: center center; /* Centra il punto di zoom */
+}

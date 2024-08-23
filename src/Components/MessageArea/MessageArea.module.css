@@ -1,0 +1,34 @@
+.imessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
+  height: 100%;
+  border-radius: 10px;
+  background: #ffffff;
+  font-family: "SanFrancisco", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.25rem;
+  margin-left: 10px;
+  margin-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 1rem;
+  width: calc(100% - 30px);
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  box-sizing: border-box;
+}
+
+.imessage::-webkit-scrollbar {
+  display: none;
+}
+
+/* If you have a container for messages, you might want to add this */
+.messageContainer {
+  flex-grow: 1;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+}

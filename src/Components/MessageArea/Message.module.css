@@ -1,0 +1,121 @@
+.messageContainer {
+  flex-grow: 1;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.messageContainer::-webkit-scrollbar {
+  display: none;
+}
+.avatar {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  margin-left: 10px; /* Distanza tra l'avatar e il messaggio */
+  overflow: hidden;
+  align-self: flex-end; /* Allinea l'avatar in basso rispetto alla riga del messaggio */
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+  transform-origin: center center;
+}
+
+.messageRow,
+.messageRowFromThem {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+  width: 100%; /* Ensure rows take full width */
+}
+
+.messageRowFromThem {
+  justify-content: flex-start;
+}
+
+.messageRow {
+  justify-content: flex-end;
+}
+.message {
+  border-radius: 12px;
+  line-height: 1.25;
+  max-width: 75%;
+  padding: 0.5rem 0.875rem;
+  position: relative;
+  word-wrap: break-word;
+  margin: 0rem 0.25rem 0.1rem 0; /* Margine destro per distanziare il messaggio dall'avatar */
+  width: fit-content;
+}
+
+.message::before,
+.message::after {
+  bottom: -0.1rem;
+  content: "";
+  height: 1rem;
+  position: absolute;
+}
+
+.fromMe {
+  background-color: #0470db;
+  color: #ffffff;
+}
+
+.fromMe::before {
+  border-bottom-left-radius: 0.5rem 0.7rem;
+  border-right: 1rem solid #0470db;
+  right: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+.fromMe::after {
+  background: #ffffff;
+  border-bottom-left-radius: 0.5rem;
+  right: -40px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}
+
+.fromThem {
+  align-self: flex-start;
+  background-color: #dfdfdf;
+  color: #000;
+  margin-left: 10px; /* Margine per distanziare il messaggio dall'avatar */
+}
+
+.fromThem::before {
+  border-bottom-right-radius: 0.8rem 0.7rem;
+  border-left: 1rem solid #dfdfdf;
+  left: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+.fromThem::after {
+  background: #ffffff;
+  border-bottom-right-radius: 0.5rem;
+  left: 20px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}
+
+.timestamp {
+  color: black;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .imessage {
+    font-size: 1.05rem;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    padding: 0.25rem 0.875rem;
+  }
+}

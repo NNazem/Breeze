@@ -1,0 +1,19 @@
+.chatInterface {
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  height: 100vh; /* Use full viewport height */
+}
+
+.chatArea {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-grow: 1; /* Allow chatArea to grow and fill available space */
+  height: 100%; /* Use full height of parent */
+}
+
+.messageAreaWrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+}

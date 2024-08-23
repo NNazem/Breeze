@@ -1,0 +1,39 @@
+.userListContainer {
+  position: relative;
+  height: 100%;
+  width: 100%; /* Usa 100% invece di 20vw */
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
+.userList {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 10px;
+  padding-bottom: 55px; /* Spazio per il pulsante di logout */
+}
+
+.userList::-webkit-scrollbar {
+  display: none;
+}
+
+.menuButton {
+  width: 91%;
+  position: relative;
+  bottom: 10px;
+  height: 45px;
+  background-color: #ac18ab;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid #ac18ab;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.menuButton:hover {
+  background-color: #ffffff;
+  color: #db04db;
+  transition: all 0.3s ease;
+}
