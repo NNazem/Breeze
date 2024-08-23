@@ -23,6 +23,7 @@
   <li>Developed in Go</li>
   <li>Manages WebSocket connections for real-time communication</li>
   <li>Handles user authentication and message routing</li>
+  <li>Utilizes JSON Web Tokens (JWT) for secure authentication</li>
 </ul>
 
 <h3>Database</h3>
@@ -34,8 +35,9 @@
 <ul>
   <li><strong>Instant messaging:</strong> No need to refresh for new messages</li>
   <li><strong>Efficient server:</strong> Go's concurrency helps manage multiple chats</li>
-  <li><strong>Secure access:</strong> Login system controls user access</li>
+  <li><strong>Secure access:</strong> Login system controls user access using JWT</li>
   <li><strong>Data persistence:</strong> Chat histories are saved for later retrieval</li>
+  <li><strong>Token-based authentication:</strong> JSON Web Tokens ensure secure and stateless authentication</li>
 </ul>
 
 <h2>Potential Enhancements</h2>
