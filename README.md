@@ -6,6 +6,8 @@
   <strong>Note:</strong> This is a demonstration project and is not suitable for production use. It is intended for learning and experimentation purposes only.
 </div>
 
+<br/>
+
 <img src="https://github.com/user-attachments/assets/d084f90d-1fdd-4cc5-868c-5c2725d58b6a" alt="Screenshot 2024-08-23 214713" style="max-width: 100%;">
 
 <h2>Current Features</h2>
