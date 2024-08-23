@@ -6,9 +6,7 @@
   <strong>Note:</strong> This is a demonstration project and is not suitable for production use. It is intended for learning and experimentation purposes only.
 </div>
 
-<br/>
-
-![Screenshot 2024-08-23 214713](https://github.com/user-attachments/assets/d084f90d-1fdd-4cc5-868c-5c2725d58b6a)
+<img src="https://github.com/user-attachments/assets/d084f90d-1fdd-4cc5-868c-5c2725d58b6a" alt="Screenshot 2024-08-23 214713" style="max-width: 100%;">
 
 <h2>Current Features</h2>
 <ul>
@@ -33,6 +31,8 @@
   <li>Handles user authentication and message routing</li>
   <li>Utilizes JSON Web Tokens (JWT) for secure authentication</li>
 </ul>
+
+<p>For more details on the backend, check out the <a href="https://github.com/NNazem/BreezeServer">BreezeServer repository</a>.</p>
 
 <h3>Database</h3>
 <ul>
