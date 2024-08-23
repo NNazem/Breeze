@@ -41,15 +41,6 @@
   <li>PostgreSQL stores user data and message history</li>
 </ul>
 
-<h2>Technical Highlights</h2>
-<ul>
-  <li><strong>Instant messaging:</strong> No need to refresh for new messages</li>
-  <li><strong>Efficient server:</strong> Go's concurrency helps manage multiple chats</li>
-  <li><strong>Secure access:</strong> Login system controls user access using JWT</li>
-  <li><strong>Data persistence:</strong> Chat histories are saved for later retrieval</li>
-  <li><strong>Token-based authentication:</strong> JSON Web Tokens ensure secure and stateless authentication</li>
-</ul>
-
 <h2>Potential Enhancements</h2>
 <p>Ideas for future development:</p>
 <ul>
