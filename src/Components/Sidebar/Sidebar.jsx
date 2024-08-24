@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useContactList } from "../../hooks/useContactList";
 import { contactsApi } from "../../api/contactApi";
 
-function Sidebar({ onSelectedChat, selectedChat, messages }) {
+function Sidebar({ onSelectedChat, selectedChat, handleLogout }) {
   const [search, setSearch] = useState("");
   const [searchedUsers, setSearchedUsers] = useState([]);
 
@@ -47,6 +47,7 @@ function Sidebar({ onSelectedChat, selectedChat, messages }) {
           selectedChat={selectedChat}
           users={users}
           isLoading={isLoading}
+          handleLogout={handleLogout}
           error={error}
         />
       )}
@@ -57,6 +58,7 @@ function Sidebar({ onSelectedChat, selectedChat, messages }) {
           selectedChat={selectedChat}
           users={searchedUsers}
           isLoading={isLoading}
+          handleLogout={handleLogout}
           error={error}
         />
       )}

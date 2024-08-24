@@ -5,9 +5,9 @@ import styles from "./UserList.module.css";
 function UserList({
   onSelectedChat,
   selectedChat,
-  onLogout,
   isLoading,
   users,
+  handleLogout,
 }) {
   if (isLoading) return <div>Caricamento...</div>;
 
@@ -23,7 +23,7 @@ function UserList({
           />
         ))}
       </div>
-      <button className={styles.menuButton} onClick={onLogout}>
+      <button className={styles.menuButton} onClick={handleLogout}>
         Logout
       </button>
     </div>

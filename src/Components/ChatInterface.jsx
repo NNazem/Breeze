@@ -11,10 +11,12 @@ import { groupApi } from "../api/groupApi";
 import { createGroupMemberApi } from "../api/createGroupMember";
 import { useContactList } from "../hooks/useContactList";
 import { useQueryClient } from "@tanstack/react-query";
+import LogoutModal from "./Authentication/LogoutModal";
 
 function ChatInterface() {
   const queryClient = useQueryClient();
   const [selectedChat, setSelectedChat] = useState(null);
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const handleRefetch = () => {
     queryClient.invalidateQueries(["contacts"]);
@@ -73,11 +75,22 @@ function ChatInterface() {
     console.log(messages);
   }, [messages]);
 
+  function handleLogout() {
+    console.log("logout");
+    setShowLogoutModal(true);
+  }
+
+  function confirmLogout() {
+    localStorage.clear();
+    window.location.reload();
+  }
+
   return (
     <div className={styles.chatInterface}>
       <Sidebar
         onSelectedChat={handleSelectedChat}
         selectedChat={selectedChat}
+        handleLogout={handleLogout}
       />
       <div className={styles.chatArea}>
         <Header selectedChat={selectedChat} />
@@ -92,6 +105,14 @@ function ChatInterface() {
         </div>
         <InputArea selectedChat={selectedChat} sendMessage={sendMessage} />
       </div>
+      {showLogoutModal && (
+        <LogoutModal
+          isOpen={showLogoutModal}
+          onConfirm={confirmLogout}
+          onCancel={() => setShowLogoutModal(false)}
+          className={styles.logoutModal}
+        />
+      )}
     </div>
   );
 }

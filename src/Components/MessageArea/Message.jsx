@@ -19,7 +19,7 @@ function Message({ message, username }) {
       </p>
       {!fromThem && (
         <img
-          src="https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg"
+          src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1724371200&semt=ais_hybrid"
           className={styles.avatar}
           alt="Avatar"
         />
