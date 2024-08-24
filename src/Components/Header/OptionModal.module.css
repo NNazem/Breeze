@@ -1,0 +1,47 @@
+.optionModal {
+  position: relative;
+  z-index: 9999; /* or any high value */
+  border: 1px solid #dddddd;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.optionGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.optionGroup:hover {
+  background-color: #f5f5f5;
+}
+
+.optionButton {
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #4e4e4e;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.optionButton:hover {
+  background-color: #f5f5f5;
+}

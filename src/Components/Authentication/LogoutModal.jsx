@@ -1,6 +1,22 @@
+import { useEffect } from "react";
 import styles from "./LogoutModal.module.css";
 
-function LogoutModal({ isOpen, onConfirm, onCancel }) {
+function LogoutModal({
+  isOpen,
+  onConfirm,
+  onCancel,
+  handleClickOutsideLogout,
+}) {
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutsideLogout);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsideLogout);
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (

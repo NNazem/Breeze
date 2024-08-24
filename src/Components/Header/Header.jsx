@@ -4,12 +4,39 @@ import {
   PiVideoCamera,
 } from "react-icons/pi";
 import styles from "./Header.module.css";
+import { useRef, useState } from "react";
+import OptionModal from "./OptionModal";
 const user = {
   name: "Marco Rossi",
   lastSeen: "Last seen recently",
 };
 
 function Header({ selectedChat }) {
+  const [showOptionModal, setShowOptionModal] = useState(false);
+  const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
+  const optionButtonRef = useRef(null);
+
+  const handleOptionClick = () => {
+    console.log(optionButtonRef.current);
+    if (optionButtonRef.current) {
+      const rect = optionButtonRef.current.getBoundingClientRect();
+      setModalPosition({
+        top: rect.bottom,
+        left: rect.left,
+      });
+    }
+    setShowOptionModal(!showOptionModal);
+  };
+
+  const handleClickOutside = (e) => {
+    if (
+      optionButtonRef.current &&
+      !optionButtonRef.current.contains(event.target)
+    ) {
+      setShowOptionModal(false);
+    }
+  };
+
   return (
     selectedChat && (
       <div className={styles.header}>
@@ -27,7 +54,20 @@ function Header({ selectedChat }) {
         <div className={styles.buttons}>
           <PiPhone size={24} className={styles.icon} />
           <PiVideoCamera size={24} className={styles.icon} />
-          <PiDotsThreeOutlineVertical size={24} className={styles.icon} />
+          <button
+            onClick={handleOptionClick}
+            ref={optionButtonRef}
+            className={styles.optionButton}
+          >
+            <PiDotsThreeOutlineVertical size={24} className={styles.icon} />
+          </button>
+          {showOptionModal && (
+            <OptionModal
+              position={modalPosition}
+              isVisible={showOptionModal}
+              handleClickOutside={handleClickOutside}
+            />
+          )}
         </div>
       </div>
     )
