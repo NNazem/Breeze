@@ -6,12 +6,13 @@ import {
 import styles from "./Header.module.css";
 import { useRef, useState } from "react";
 import OptionModal from "./OptionModal";
+import DeleteModal from "./DeleteModal";
 const user = {
   name: "Marco Rossi",
   lastSeen: "Last seen recently",
 };
 
-function Header({ selectedChat }) {
+function Header({ selectedChat, setSelectedChat }) {
   const [showOptionModal, setShowOptionModal] = useState(false);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
   const optionButtonRef = useRef(null);
@@ -66,6 +67,8 @@ function Header({ selectedChat }) {
               position={modalPosition}
               isVisible={showOptionModal}
               handleClickOutside={handleClickOutside}
+              selectedChat={selectedChat}
+              setSelectedChat={setSelectedChat}
             />
           )}
         </div>

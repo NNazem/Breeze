@@ -7,6 +7,12 @@ export const groupApi = {
       group_name: username1 + " - " + username2,
     });
   },
+  deleteGroup: async (groupId) => {
+    const apiClient = createApiClient(localStorage.getItem("token"));
+    return apiClient.delete("/messageGroups/delete", {
+      group_id: groupId,
+    });
+  },
   fetchGroupId: async (contact_id1, contact_id2) => {
     const apiClient = createApiClient(localStorage.getItem("token"));
     return apiClient.post("/groupMembers/searchId", {

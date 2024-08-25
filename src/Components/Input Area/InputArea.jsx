@@ -7,7 +7,7 @@ function InputArea({ sendMessage }) {
   const [message, setMessage] = useState("");
   const queryClient = useQueryClient();
   function handleSendMessage(e) {
-    if (e.key !== "Enter") return;
+    if (e.key !== "Enter" || message.length == 0) return;
     sendMessage(e.target.value);
     setMessage("");
     queryClient.invalidateQueries(["lastMessage"]);
@@ -23,12 +23,14 @@ function InputArea({ sendMessage }) {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-      <button
-        className={styles.sendButton}
-        onClick={() => sendMessage(message)}
-      >
-        <CiLocationArrow1 size={24} />
-      </button>
+      {message?.length != 0 && (
+        <button
+          className={styles.sendButton}
+          onClick={() => sendMessage(message)}
+        >
+          <CiLocationArrow1 size={24} />
+        </button>
+      )}
     </div>
   );
 }

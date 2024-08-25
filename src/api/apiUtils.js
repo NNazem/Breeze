@@ -30,5 +30,16 @@ export const createApiClient = (token) => {
         return response.json();
       });
     },
+    delete: (endpoint, body, options = {}) => {
+      return fetch(`${API_BASE_URL}${endpoint}`, {
+        ...defaultOptions,
+        ...options,
+        method: "DELETE",
+        body: JSON.stringify(body),
+      }).then((response) => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.json();
+      });
+    },
   };
 };

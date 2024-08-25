@@ -11,6 +11,7 @@ import { groupApi } from "../api/groupApi";
 import { createGroupMemberApi } from "../api/createGroupMember";
 import { useQueryClient } from "@tanstack/react-query";
 import LogoutModal from "./Authentication/LogoutModal";
+import DeleteModal from "./Header/DeleteModal";
 
 function ChatInterface() {
   const queryClient = useQueryClient();
@@ -96,7 +97,7 @@ function ChatInterface() {
         handleLogout={handleLogout}
       />
       <div className={styles.chatArea}>
-        <Header selectedChat={selectedChat} />
+        <Header selectedChat={selectedChat} setSelectedChat={setSelectedChat} />
         <div className={styles.messageAreaWrapper}>
           {isLoading ? (
             <div>Caricamento messaggi...</div>
