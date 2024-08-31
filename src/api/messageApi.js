@@ -13,4 +13,10 @@ export const messageApi = {
       group_id: group_id,
     });
   },
+  deleteMessage: async (group_id) => {
+    const apiClient = createApiClient(localStorage.getItem("token"));
+    return apiClient.delete("/messages/delete", {
+      group_id: group_id,
+    });
+  },
 };

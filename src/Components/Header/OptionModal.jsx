@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./OptionModal.module.css";
 import DeleteModal from "./DeleteModal";
+import ClearHistoryModal from "./ClearHistoryModal";
 
 function OptionModal({
   position,
@@ -10,6 +11,7 @@ function OptionModal({
   setSelectedChat,
 }) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showClearHistoryModal, setShowClearHistoryModal] = useState(false);
   useEffect(() => {
     if (isVisible) {
       document.addEventListener("mousedown", handleOutsideClick);
@@ -31,6 +33,11 @@ function OptionModal({
     setShowDeleteModal(true);
   }
 
+  function handleClearHistoryClick(e) {
+    e.stopPropagation();
+    setShowClearHistoryModal(true);
+  }
+
   function onDelete() {
     console.log("Delete");
   }
@@ -50,7 +57,12 @@ function OptionModal({
             Delete chat
           </button>
         </div>
-        <button className={styles.optionButton}>Clear history</button>
+        <button
+          className={styles.optionButton}
+          onClick={handleClearHistoryClick}
+        >
+          Clear history
+        </button>
         <button className={styles.optionButton}>Set Wallpaper</button>
       </div>
       {showDeleteModal && (
@@ -61,6 +73,14 @@ function OptionModal({
           user={selectedChat.username}
           groupId={selectedChat.group_id}
           setSelectedChat={setSelectedChat}
+        />
+      )}
+      {showClearHistoryModal && (
+        <ClearHistoryModal
+          className={styles.logoutModal}
+          setShowClearHistoryModal={setShowClearHistoryModal}
+          user={selectedChat.username}
+          groupId={selectedChat.group_id}
         />
       )}
     </div>
