@@ -1,0 +1,100 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.loginWrapper {
+  display: flex;
+  width: 50%;
+  height: 40%;
+  min-height: 500px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.loginLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.loginRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background: linear-gradient(to top, #0470db 0%, #131a2b 100%);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.loginTitle {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: Inter, sans-serif;
+  color: #0470db;
+}
+
+.loginInput {
+  width: 80%;
+  height: 35px;
+  margin: 10px 0;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.loginInput:focus {
+  outline-color: rgba(81, 156, 225, 0.8824);
+  outline-style: double;
+}
+
+.loginButton {
+  width: 82%;
+  height: 35px;
+  border-radius: 5px;
+  margin: 10px 0;
+
+  border: 1px solid #d3d3d3;
+  background-color: #0470db;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.loginRightTitle {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Inter, sans-serif;
+  color: white;
+}
+
+.loginRightDesc {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Inter, sans-serif;
+  color: white;
+  margin-top: 20px;
+}
+
+.loginRightButton {
+  width: 60%;
+  min-height: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  border: 1px solid #0470db;
+  background-color: #0470db;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Login.module.css";
 import { contactsApi } from "../../api/contactApi";
-function Login({ setUser }) {
+function Login({ setUser, setSignup }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -43,7 +43,10 @@ function Login({ setUser }) {
           <p className={styles.loginRightDesc}>
             Welcome back! We are happy to have you here.
           </p>
-          <button className={styles.loginRightButton}>
+          <button
+            className={styles.loginRightButton}
+            onClick={() => setSignup(true)}
+          >
             No account yet? Signup.
           </button>
         </div>
